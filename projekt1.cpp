@@ -9,7 +9,6 @@ int silnia(int n) {
         wynik *= i;
     return wynik;
 }
-
 int main() {
     int a, b;
     cout << "Podaj liczbe calkowita ";
@@ -21,8 +20,17 @@ int main() {
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+        cout << "1. Oblicz silnie" << endl;
         cin >> wyjscie;
+        switch (wyjscie) {
+            case 1: {
+                int liczba;
+                cout << "Podaj liczbe: ";
+                cin >> liczba;
+                cout << "Silnia: " << silnia(liczba) << endl;
+                break;
+            }
+        }
     } while(wyjscie != 0);
     return 0;
 }
-

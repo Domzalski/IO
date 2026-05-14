@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 bool czyPierwsza(int n) {
     if (n < 2) return false;
@@ -14,12 +14,25 @@ int main() {
     cin >> a >> b;
     int wyjscie;
     do {
-        cout << endl;
+         cout << endl;
         cout << endl;
         cout << "MENU" << endl;
         cout << "Podaj numer czynnosci, ktora chcesz wykonac" << endl;
         cout << "0. Wyjscie" << endl;
+        cout << "1. Sprawdz czy liczba jest pierwsza" << endl;
         cin >> wyjscie;
+        switch (wyjscie) {
+            case 1: {
+                int liczba;
+                cout << "Podaj liczbe: ";
+                cin >> liczba;
+                if (czyPierwsza(liczba))
+                    cout << "Liczba jest pierwsza." << endl;
+                else
+                    cout << "Liczba nie jest pierwsza." << endl;
+                break;
+            }
+        }
     } while(wyjscie != 0);
     return 0;
 }
